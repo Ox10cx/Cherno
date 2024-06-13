@@ -1,0 +1,46 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+     {
+      "type": "cppbuild",
+      "label": "C/C++: clang++ build active file",
+      "command": "/usr/bin/clang++",
+      "args": [
+       "-std=c++17",
+       "-fdiagnostics-color=always",
+       "-Wall",
+       "-g",
+       "-I${workspaceFolder}/dependency/GLFW/include",
+       "-L${workspaceFolder}/dependency/GLFW/lib-x86_64",
+       "${workspaceFolder}/dependency/GLFW/lib-x86_64/libglfw3.a",
+       "-I${workspaceFolder}/dependency/GLEW/include",
+       "-L${workspaceFolder}/dependency/GLEW/lib",
+       "${workspaceFolder}/dependency/GLEW/lib/libGLEW.a",
+       "${workspaceFolder}/*.cpp",
+       "-o",
+       "${workspaceFolder}/OpenGL",
+       "-framework",
+       "OpenGL",
+       "-framework",
+       "Cocoa",
+       "-framework",
+       "IOKit",
+       "-framework",
+       "CoreVideo",
+       "-framework",
+       "CoreFoundation",
+       "-Wno-deprecated"
+      ],
+      "options": {
+       "cwd": "${fileDirname}"
+      },
+      "problemMatcher": ["$gcc"],
+      "group": {
+       "kind": "build",
+       "isDefault": true
+      },
+      "detail": "compiler: /usr/bin/clang++"
+     }
+    ]
+   }
+   
