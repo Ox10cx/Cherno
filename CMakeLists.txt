@@ -8,9 +8,9 @@ set(CMAKE_CXX_STANDARD 17)
 add_definitions(-DGLEW_STATIC)
 
 
-file(GLOB shader_list res)
+file(GLOB res_list res)
 # 将资源拷贝到CMAKE工程编译目录
-file(COPY ${shader_list} DESTINATION ${CMAKE_BINARY_DIR})
+file(COPY ${res_list} DESTINATION ${CMAKE_BINARY_DIR})
 
 # file(GLOB head_list *.h)
 # file(GLOB src_list *.cpp)
